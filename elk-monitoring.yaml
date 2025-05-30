@@ -83,9 +83,15 @@ data:
     global:
       scrape_interval: 15s
     scrape_configs:
-      - job_name: 'kubernetes'
+      - job_name: 'elasticsearch'
         static_configs:
-          - targets: ['localhost:9090']
+          - targets: ['elasticsearch:9200']
+      - job_name: 'cassandra'
+        static_configs:
+          - targets: ['cassandra:9042']
+      - job_name: 'kafka'
+        static_configs:
+          - targets: ['kafka:9092']
 ---
 # Grafana Service
 apiVersion: v1
