@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: haproxy-config
-  namespace: default
+  namespace: do-an
   labels:
     app: haproxy
 data:
